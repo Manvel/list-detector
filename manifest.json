@@ -1,0 +1,26 @@
+{
+  "author": "Manvel",
+  "manifest_version": 3,
+  "name": "List detector",
+  "description": "Try detecting list items on the page",
+  "background": {
+     "service_worker": "js/background.js"
+   },
+  "action": {
+     "default_icon": "images/icon/128x128.png"
+  },
+  "icons": {
+     "128": "images/icon/128x128.png",
+     "48": "images/icon/48x48.png",
+     "16": "images/icon/16x16.png"
+  },
+  "content_scripts": [
+    {
+      "css": [ "css/main.css" ],
+      "matches": [ "*://*/*" ]
+    }
+ ],
+  "permissions": ["scripting"],
+  "host_permissions": ["*://*/*", "<all_urls>"],
+  "version": "0.1"
+}
